@@ -1,5 +1,5 @@
 # Proyecto desde cero para el gestión de token JWT
-`npm init -y`
+`npm init -yes`
 
 `npm i express morgan jsonwebtoken dotenv`
 
