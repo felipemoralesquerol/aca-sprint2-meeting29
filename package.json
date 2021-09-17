@@ -1,8 +1,8 @@
 {
-  "name": "aca-sprint2-meeting27",
+  "name": "aca-sprint2-meeting29",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
