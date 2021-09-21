@@ -8,6 +8,10 @@ exports.signin = function signin(req, res, next) {
         console.log('signin', usuario, password, email);
 
         // TODO: Verificar credenciales de usuario en base de datos
+        if (usuario != 'felipe' || password != '1234') {
+            console.error("Error de credenciales: ");
+            res.status(401).send({ status: 'Error de credenciales. Acceso denegado' });
+        }
 
         jwt.sign(req.body, process.env.JWT_SECRET_KEY, { expiresIn: process.env.JWT_EXPIRES_IN }, (err, token) => {
             if (err) {
@@ -78,5 +82,4 @@ exports.authenticated = function authenticated(req, res, next) {
 // Perfil de usuario
 exports.me = function me(req, res, next) {
     res.json({ status: 'me', 'data': req.authData });
-
 };

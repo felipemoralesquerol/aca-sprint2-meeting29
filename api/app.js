@@ -18,8 +18,8 @@ const auth = require('./routes/auth');
 app.use(router);
 app.use(auth);
 
-app.set('port', 3000);
-app.listen(3000, function (err) {
+app.set('port', process.env.WEB_PORT);
+app.listen(app.get('port'), function (err) {
     if (err) {
         console.error(err);
     } else {
